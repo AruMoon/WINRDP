@@ -1,3 +1,3 @@
 Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
-& {$P = $env:TEMP + '\chromeremotedesktophost.msi'; Invoke-WebRequest 'https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi' -OutFile $P; Start-Process $P -Wait; Remove-Item $P}
-& {$P = $env:TEMP + '\chrome_installer.exe'; Invoke-WebRequest 'https://dl.google.com/chrome/install/latest/chrome_installer.exe' -OutFile $P; Start-Process -FilePath $P -Args '/install' -Verb RunAs -Wait; Remove-Item $P}
+Set-ADAccountPassword -Identity runneradmin -Reset -NewPassword (ConvertTo-SecureString -AsPlainText "$env:NEW_PASS" -Force)
+& {$P = $env:TEMP + '\ngrok.zip' ; Invoke-WebRequest 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip' -OutFile $P ; Expand-Archive -Path $P -DestinationPath $env:Programfiles -Force ; Remote-Item $P}
