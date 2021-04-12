@@ -1,16 +1,27 @@
 # WINRDP
-How to use 
 
-Just Fork this Repository, Go to Actions tab, Select the Windows-CRD workflow. Then select Run Workflow fill the following data in CRD Code and your Pin in the fields. After that, Press Start.
+### How to start (first configuration)
 
-Input the following code in the fields.
+Fork this repository
 
-Get the Windows (Powershell) command from here:
+Go to Settings -> Secrets. Setup 2 environment variables:
 
-https://remotedesktop.google.com/headless
+NEW_PASS - password for authentication in RDP client
 
-Enter you Six digit Pin code to Login
+NGROKAUTHTOKEN - token in your [ngrok](https://ngrok.com)
 
-(Any Six digit Pin)
+### Run
 
-Thats it... After 2-3 min of Initialize, Check your CRD Application or Account.
+Go to Actions -> Windows-RDP Workflows -> Run workflow
+
+Then wait for start
+
+### Connect
+
+Get endpoint url from ngrok dashboard like `tcp://0.tcp.ngrok.io:19609`
+
+Use this url without `tcp://` part to connect via RDP client in your system
+
+## Warning
+
+Workflow job will automatically timeout after 6 hours
