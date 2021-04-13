@@ -12,6 +12,6 @@ Go to Actions -> Windows-RDP Workflows -> Run workflow. Then wait for start
 
 Get endpoint url from ngrok dashboard like `tcp://0.tcp.ngrok.io:19609`. Use this url **without `tcp://` part** to connect via RDP client in your system. To authorize, you should enter `runneradmin` as Username and your `NEW_PASS` as Password
 
-## Warning
+## Notice
 
 Workflow job will automatically timeout after 6 hours
